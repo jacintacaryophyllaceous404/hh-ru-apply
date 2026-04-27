@@ -1,0 +1,11 @@
+node_modules/
+data/
+.env
+.env.local
+config/secrets.local.env
+CV/
+.cursor/
+.DS_Store
+playwright-report/
+test-results/
+*.log

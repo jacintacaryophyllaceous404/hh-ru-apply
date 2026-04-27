@@ -1,0 +1,14 @@
+services:
+  dashboard:
+    build: .
+    container_name: hh-ru-apply-dashboard
+    ports:
+      - "3849:3849"
+    volumes:
+      - ./data:/app/data
+      - ./config/cover-letter.txt:/app/config/cover-letter.txt:ro
+      - ./CV:/app/CV:ro
+    env_file:
+      - .env
+      - config/secrets.local.env
+    restart: unless-stopped

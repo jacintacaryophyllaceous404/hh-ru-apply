@@ -24,12 +24,35 @@
 
 ## Быстрый старт
 
+### Вариант А: Локальный запуск
+
 ```bash
-git clone <ваш-repo-url>
+git clone https://github.com/Steev193/hh-ru-apply.git
 cd hh-ru-apply
 npm install
 npx playwright install chromium
 cp .env.example .env
+```
+
+### Вариант Б: Docker
+
+```bash
+git clone https://github.com/Steev193/hh-ru-apply.git
+cd hh-ru-apply
+cp .env.example .env
+# первый вход (сохранение сессии)
+docker compose run --rm dashboard npm run login
+# запуск дашборда
+docker compose up -d
+```
+
+Дашборд будет доступен на http://127.0.0.1:3849. Данные сохраняются в локальной папке `data/` через volume.
+
+Для запуска других скриптов в контейнере:
+
+```bash
+docker compose run --rm dashboard npm run harvest
+docker compose run --rm dashboard npm run hh-fill-letter -- --id=...
 ```
 
 ## Настройка
